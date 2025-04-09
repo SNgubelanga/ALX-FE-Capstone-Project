@@ -43,13 +43,13 @@ function SideBar() {
         {/* Category */}
         <div className="links__title mt-10">More Links.</div>
         <div className="links">
-            <Link className="link__wrapper" to={""}>
+            {/* <Link className="link__wrapper" to={""}>
                 <div className="link__icon">
                     <BiCompass/>
                 </div>
-                <span>Browse</span>
-            </Link>
-            <Link className="link__wrapper" to={""}>
+                <span>Mo</span>
+            </Link> */}
+            {/* <Link className="link__wrapper" to={""}>
                 <div className="link__icon">
                     <BiHeart/>
                 </div>
@@ -60,7 +60,7 @@ function SideBar() {
                     <BiCalendar/>
                 </div>
                 <span>New Films</span>
-            </Link>
+            </Link> */}
         </div>
       </div>
     </div>
