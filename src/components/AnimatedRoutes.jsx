@@ -4,8 +4,8 @@ import { useNavigate } from "react-router-dom";
 import HomePage from "../views/HomePage";
 
 import SearchResults from "../views/SearchResults";
-// import MovieDetails from "../views/MovieDetails";
-// import Movies from "../views/Movies";
+import MovieDetails from "../views/MovieDetails";
+import Movies from "../views/Movies";
 
 function AnimatedRoutes() {
     const navigate = useNavigate();
@@ -17,8 +17,8 @@ function AnimatedRoutes() {
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<HomePage/>} />
           <Route path="/search" element={<SearchResults/>} />
-          {/* <Route path="/movie" element={<MovieDetails/>} />
-          <Route path="/movies" element={<Movies/>} /> */}
+          <Route path="/movie" element={<MovieDetails/>} />
+          <Route path="/movies" element={<Movies/>} />
           {/* <Route path="*" element={<NotFound />} /> */}
         </Routes>
       </AnimatePresence>
