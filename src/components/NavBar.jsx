@@ -3,9 +3,9 @@ import { FaSearch, FaBell, FaFacebookMessenger } from "react-icons/fa";
 function NavBar() {
   return (
     <nav>
-      <form method="post" className="search__bar">
+      <form method="get" action={"/search/"} className="search__bar">
         <FaSearch className="search__icon" />
-        <input type="text" placeholder="Search everything.." />
+        <input type="text" name="query" placeholder="Search everything.." />
       </form>
 
       <div className="right__links flex gap-4 items-center">

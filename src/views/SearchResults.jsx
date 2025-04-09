@@ -1,6 +1,24 @@
 import MovieCard from "../components/MovieCard";
+import { useParams } from "react-router-dom";
 
 function SearchResults() {
+    const params = useParams()
+
+
+    const [movie, setMovie] = useState([]);
+    
+      const getMovies = async () => {
+        const response = await axios
+          .get("http://www.omdbapi.com/?s=" + params.query + "&apikey=2e00ab64")
+          .catch((err) => setServerErr(err));
+        const search = response.data;
+        setMovie(search);
+      };
+    
+      useEffect(() => {
+        getMovies();
+      }, []);
+
   return (
     <>
       <section className="search__results">
