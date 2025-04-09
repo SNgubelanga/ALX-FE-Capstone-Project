@@ -17,7 +17,7 @@ function HomePage() {
           <button className="custom__btn mt-20">Watch</button>
         </div>
         <div className="movie__image">
-          <img src="/hero.jpg" alt="" />
+          <img src="/img/hero.jpg" alt="" />
         </div>
       </section>
       {/* Filters */}
@@ -45,7 +45,7 @@ function HomePage() {
             <div className="recently__card hover:shadow-md cursor-pointer">
               <div className="recently__card__header">
                 <div className="card__image">
-                  <img src="/movie1.jpg" alt="" />
+                  <img src="/img/movie1.jpg" alt="" />
                 </div>
                 <div className="card__plays">
                   <FaPlay />
@@ -60,7 +60,7 @@ function HomePage() {
             <div className="recently__card hover:shadow-md cursor-pointer">
               <div className="recently__card__header">
                 <div className="card__image">
-                  <img src="/movie2.jpg" alt="" />
+                  <img src="/img/movie2.jpg" alt="" />
                 </div>
                 <div className="card__plays">
                   <FaPlay />
@@ -75,7 +75,7 @@ function HomePage() {
             <div className="recently__card hover:shadow-md cursor-pointer">
               <div className="recently__card__header">
                 <div className="card__image">
-                  <img src="/movie3.jpg" alt="" />
+                  <img src="/img/movie3.jpg" alt="" />
                 </div>
                 <div className="card__plays">
                   <FaPlay />
