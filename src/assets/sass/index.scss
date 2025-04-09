@@ -1,13 +1,272 @@
-@import url(./partials/_header.scss);
-@import url(./partials/_mixins.scss);
+@import url(./partials/_sidebar.scss);
 @import url(./partials/_typography.scss);
+@import url(./partials/_header.scss);
 
 *, *::after, *::before{
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 
 body{
-    background: #242424;
+    background: #252525;
+    width: 100%;
+    height: 100%;
+}
+footer{
+    padding: 20px 40px 20px 450px;
+    color: #fff;
+    border-top: 1px solid #3f3f3f;
+}
+.hr__custom{
+    margin: 4px 0;
+    background: #353535;
+    height: 1px;
+}
+.main__content__section{
+    // background: red;
+    padding: 140px 40px 40px 450px;
+    position: relative;
+    // height: 100vh;
+    width: 100% !important;
+    left: 0;
+
+    .hero__section{
+        height: 400px;
+        width: 100%;
+        border-radius: 16px;
+        // border: 1px solid #2e2e2e;
+        background: #000000;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 10px;
+
+
+        .movie__image img{
+            border-radius: 16px;
+        }
+
+        .movie__title{
+            font-size: 30px;
+            color: #fff;
+            font-family: "QuicksandBold";
+        }
+        .movie__description{
+            color: #8f8f8f;
+        }
+    }
+}
+.section__title{
+    p{
+        color: #a1a1a1;
+    }
+}
+
+.custom__btn{
+    outline: none;
+    border: none;
+    background: #eb2323;
+    color: #fff;
+    display: inline-flex;
+    height: 45px;
+    align-items: center;
+    justify-content: center;
+    padding-inline: 25px;
+    font-family: "Quicksand";
+    border-radius: 16px;
+}
+// Movie Card
+.movies__cards__row{
+    gap: 2%;
+    display: flex;
+    flex-wrap: wrap;
+
+    .movie__card{
+        width: 23%;
+        background: #141414;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        border: 1px solid #303030;
+
+        .movie__card__header{
+            width: 100%;
+            height: 300px;
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+                border-top-right-radius: 10px;
+                border-top-left-radius: 10px;
+            }
+        }
+        .movie__card__body{
+            color: #fff;
+            padding: 10px 20px;
+
+            .movie__title{
+                text-transform: uppercase;
+                font-family: "QuicksandBold";
+            }
+            .movie__category{
+                background: #272727;
+                border: 1px solid #303030;
+                display: inline-block;
+                padding-inline: 8px;
+                margin: 6px 0;
+                border-radius: 10px;
+            }
+            .director{
+                font-size: 15px;
+                opacity: .5;
+
+                span{
+                    opacity: 1 !important;
+                    color: #fff !important;
+                }
+            }
+        }
+        .movie__card__footer{
+            padding: 5px 20px 20px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .more__info{
+                color: #fff;
+            }
+        }
+    }
+}
+
+section{
+    .section__title{
+        border-left: 4px solid #eb2323;
+        padding: 4px 20px;
+        margin: 20px 0;
+
+        span{
+            font-family: "QuicksandBold";
+            color: #fff;
+            font-size: 20px;
+            text-transform: uppercase;
+        }
+    }
+}
+
+// Recently Watched
+.recently__watched{
+    .section__content{
+        .section__cards{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2%;
+
+            .recently__card{
+                border-radius: 10px;
+                background: #2e2e2e;
+                border: 1px solid #3d3d3d;
+                padding: 10px;
+                width: 32%;
+                margin-bottom: 15px;
+                transition: .3s all ease-in-out;
+
+                &:hover{
+                    border-color: #4b4b4b;
+                }
+
+                .recently__card__header{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .card__image{
+                        width: 80px;
+                        height: 80px;
+                        border-radius: 8px;
+                        border: 1px solid #3d3d3d;
+
+                        img{
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 8px;
+                            object-fit: cover;
+                            object-position: center;
+                        }
+                    }
+                    .card__plays{
+                        display: flex;
+                        align-items: center;
+                        gap: 6px;
+                        color: #fff;
+                    }
+                }
+                .recently__card__body{
+                    margin-top: 8px;
+                    color: #a1a1a1;
+
+                    .movie__name{
+                        font-family: "QuicksandBold";
+                        font-size: 18px;
+                        text-transform: uppercase;
+                    }
+                    .movie__category{
+                        font-size: 14px;
+                        background: #363636;
+                        border: 1px solid #3f3f3f;
+                        display: inline-block;
+                        padding: 1px 4px;
+                        color: #fff;
+                        border-radius: 8px;
+                        margin-top: 6px;
+                    }
+                }
+            }
+        }
+       
+    }
+}
+
+// Filters
+.filters{
+    .filter{
+        background: #363636;
+        border: 1px solid #494949;
+        padding: 1px 6px;
+        border-radius: 8px;
+        color: #8f8f8f;
+    }
+}
+
+// Movie Details
+.section__details{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 40px;
+
+    .movie__image{
+        height: 400px;
+        border-radius: 10px;
+        border: 1px solid #424242;
+
+        img{
+            border-radius: 10px;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+    .movie__info{
+        .movie__title{
+            text-transform: uppercase;
+            font-size: 17px;
+            color: #fff;
+            font-family: "QuicksandBold";
+        }
+        .movie__description{
+            color: #969696;
+        }
+    }
 }

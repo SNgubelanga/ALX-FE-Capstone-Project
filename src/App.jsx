@@ -1,9 +1,10 @@
 import './App.css'
 import AnimatedRoutes from "./components/AnimatedRoutes";
 import { BrowserRouter } from "react-router-dom";
-import SideBar from './components/SideBar';
+
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
+import SideBar from './components/SideBar';
 
 function App() {
 
