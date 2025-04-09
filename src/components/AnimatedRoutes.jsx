@@ -17,7 +17,7 @@ function AnimatedRoutes() {
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<HomePage/>} />
           <Route path="/search" element={<SearchResults/>} />
-          <Route path="/movie" element={<MovieDetails/>} />
+          <Route path="/movie/:id" element={<MovieDetails/>} />
           <Route path="/movies" element={<Movies/>} />
           {/* <Route path="*" element={<NotFound />} /> */}
         </Routes>

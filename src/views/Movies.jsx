@@ -1,10 +1,28 @@
 import MovieCard from "../components/MovieCard";
 import { Link } from "react-router-dom";
 import { FaFilter } from "react-icons/fa";
+import axios from "axios";
+import { useEffect, useState } from "react";
+
 
 function Movies() {
+  const [movies_list, setMovies] = useState([]);
+
+  const getMovies = async () => {
+    const response = await axios
+      .get("http://www.omdbapi.com/?s=avengers&apikey=2e00ab64")
+      .catch((err) => setServerErr(err));
+    const movie_list = response.data.Search;
+    setMovies(movie_list);
+  };
+
+  useEffect(() => {
+    getMovies();
+  }, []);
+
   return (
     <section className="search__results">
+      {/* {console.log(movies_list)} */}
       <div className="section__title">
         <span>Movies</span>
         <p>See the list of movies you can watch.</p>
@@ -42,27 +60,24 @@ function Movies() {
         {/* Search Results Movies */}
         <div className="search__results__movies">
           <div className="movies__cards__row">
-            <MovieCard
-              image="/img/movie1.jpg"
-              id={1}
-              title="Dr Strange - The Multiverse"
-              category="Sci-Fi"
-              director="Chris Evans"
-            />
-            <MovieCard
-              image="/img/movie2.jpg"
-              id={2}
-              title="Wrong Turn - Dead End"
-              category="Horror, Thriller"
-              director="Dobbie Skerty"
-            />
-            <MovieCard
-              image="/img/movie3.jpg"
-              id={3}
-              title="Avatar - The Way Of Water"
-              category="Science Friction"
-              director="Stalonne"
-            />
+            {movies_list.length === 0 ? (
+              <div className="post__empty">
+                <p>Loading.... </p>
+              </div>
+            ) : (
+              movies_list.map((movie) => {
+                return (
+                  <MovieCard
+                    image={movie.Poster}
+                    key={movie.imdbID}
+                    id={movie.imdbID}
+                    title={movie.Title}
+                    category={movie.Genre}
+                    director={movie.Director}
+                  />
+                );
+              })
+            )}
           </div>
         </div>
       </div>

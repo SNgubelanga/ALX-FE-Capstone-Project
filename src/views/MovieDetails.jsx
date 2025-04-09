@@ -1,6 +1,19 @@
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 function MovieDetails(){
+    const params = useParams();
+
+    console.log(params.id)
+    const [movieDetails, setMovieDetails] = useState([]);
+    
+      const getMovies = async () => {
+        // Get Movie Details
+      };
+    
+      useEffect(() => {
+        getMovies();
+      }, []);
+
     return(
         <section className="movie__details">
             <div className="section__title">
