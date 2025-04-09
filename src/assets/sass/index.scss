@@ -1,0 +1,13 @@
+@import url(./partials/_header.scss);
+@import url(./partials/_mixins.scss);
+@import url(./partials/_typography.scss);
+
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #242424;
+}
