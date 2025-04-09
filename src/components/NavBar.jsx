@@ -5,7 +5,7 @@ function NavBar() {
     <nav>
       <form method="get" action={"/search/"} className="search__bar">
         <FaSearch className="search__icon" />
-        <input type="text" name="query" placeholder="Search everything.." />
+        <input type="text" name="query" autoComplete="off" placeholder="Search everything.." />
       </form>
 
       <div className="right__links flex gap-4 items-center">

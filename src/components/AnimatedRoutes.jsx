@@ -15,7 +15,7 @@ function AnimatedRoutes() {
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<HomePage/>} />
-          <Route path="/search/:query" element={<SearchResults/>} />
+          <Route path="/search" element={<SearchResults/>} />
           <Route path="/movie/:id" element={<MovieDetails/>} />
           <Route path="/movies" element={<Movies/>} />
           {/* <Route path="*" element={<NotFound />} /> */}

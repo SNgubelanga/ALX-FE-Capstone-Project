@@ -6,7 +6,7 @@ function SideBar() {
     <div className="sidebar">
         {/* Logo */}
       <div className="sidebar__logo">
-        <Link to={"/auth/sign-up"} className="logo__link">
+        <Link to={"/"} className="logo__link">
           Film<span>Hub</span>
         </Link>
       </div>

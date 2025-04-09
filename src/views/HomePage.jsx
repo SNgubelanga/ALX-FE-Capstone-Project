@@ -8,10 +8,7 @@ function HomePage() {
         <div className="p-14">
           <p className="movie__title uppercase mb-4">The Soul Conductor.</p>
           <p className="movie__description">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
-            perspiciatis cumque esse corporis doloribus maiores ipsam beatae
-            eius reiciendis quod, nihil suscipit consequuntur provident,
-            doloremque fugiat sunt. Fugit, modi soluta.
+            A twin with a mystical gift searches for her missing twin, who police say doesn't exist.
           </p>
 
           <button className="custom__btn mt-20">Watch</button>
