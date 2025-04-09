@@ -1,12 +1,81 @@
-# React + Vite
+Movie Database project - Film Hub
+🎬 FilmHub
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to FilmHub, a modern and responsive web application that allows users to explore a wide variety of movies. Built with React, this project emphasizes functionality, design, and responsive layout using tools like Figma, Tailwind CSS, and React Router.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🚀 Project Overview
 
-## Expanding the ESLint configuration
+FilmHub is a film database web app where users can:
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Browse popular and trending movies
+- View detailed information for each film
+- Experience a responsive and interactive user interface
+- Prepare for future features like user reviews, search filters, and watchlists
+
+
+🧱 Tech Stack
+
+- Frontend: React, Vite
+- Styling: Tailwind CSS
+- Routing: React Router DOM
+- Design: Figma (UI/UX Planning)
+- State Management: useState, useEffect
+- Version Control: Git & GitHub
+
+## ✅ Features
+
+### Home Page
+- Displays a grid of movie cards with title, summary, and image
+- Responsive design with hover effects
+
+### Movie Detail Page
+- Displays in-depth information: full description, cast, etc.
+- Responsive layout with styled sections
+
+### Search Movie Input 
+- Front-end validation for input fields
+- Responsive, styled form with Tailwind CSS
+
+🧪 Getting Started
+
+Prerequisites
+- Node.js and npm installed
+
+**Setup Instructions
+**
+Bash
+
+Clone the repository
+git clone https://github.com/SNgubelanga/ALX-FE-Capstone-Project
+# Navigate to the project
+cd film-hub
+
+# Install dependencies
+npm install
+
+# Run the development server
+npm run dev
+
+🛠️ Development Progress
+- Week	Progress
+- Week 1	Designed UI in Figma
+- Week 2	Set up project repo, started core features
+- Week 3	Built homepage, responsive grid, and detail view
+- Week 4	Added responsive movie submission form
+
+🧠 Future Enhancements
+- Add search functionality
+
+- Integrate real API (e.g. TMDB)
+
+- Implement user authentication
+
+🤝 Contributing
+Contributions are welcome! Feel free to fork the repo and submit a pull request.
+
+💬 Contact
+Built by Sbahle Ngubelanga
+GitHub: github.com/SNgubelanga
+Email: sbahle.mkhetheka99@gmail.com
+
